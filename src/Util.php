@@ -50,13 +50,13 @@ class Util
     public static function singularize($word)
     {
         $length = strlen($word);
-        if ($length > 3 && $length-3 === strrpos($word, 'ies', -3)) {
+        if ($length > 3 && $length - 3 === strrpos($word, 'ies', -3)) {
             return substr($word, 0, -3) . 'y';
         }
-        if ($length > 2 && $length-2 === strrpos($word, 'es', -2)) {
+        if ($length > 2 && $length - 2 === strrpos($word, 'es', -2)) {
             return substr($word, 0, -2);
         }
-        if ($length > 1 && $length-1 === strrpos($word, 's', -1)) {
+        if ($length > 1 && $length - 1 === strrpos($word, 's', -1)) {
             return substr($word, 0, -1);
         }
         return $word;
@@ -645,7 +645,7 @@ class Util
     public static function acfClearPostStore($post_id)
     {
         $acf_store = acf_get_store('values');
-        $acf_store->data = array_filter($acf_store->data, function($key) use ($post_id) {
+        $acf_store->data = array_filter($acf_store->data, function ($key) use ($post_id) {
             return false === strpos($key, "$post_id");
         }, ARRAY_FILTER_USE_KEY);
     }
@@ -690,7 +690,7 @@ class Util
         }
         /* Temporarily switch global post to a dummy one */
         $global_post = $GLOBALS['post'] ?? null;
-        $GLOBALS['post'] = (object) ['post_content' => ''];
+        $GLOBALS['post'] = (object)['post_content' => ''];
 
         /* Modified from wp_trim_excerpt() */
         if (!$raw) {

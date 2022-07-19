@@ -41,7 +41,7 @@ class Theme
     ];
 
     const PLATFORM_THEME_SUPPORT = [
-        'set-design/nav-menu'
+        'gilgamesh/nav-menu'
     ];
 
     const EXTENSIONS = [];
