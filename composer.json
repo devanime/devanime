@@ -1,0 +1,49 @@
+{
+    "name": "situation/backstage",
+    "description": "A plugin framework for easily creating re-usable modules across projects",
+    "authors": [
+        {
+            "name": "Jeremy Strom",
+            "email": "jstrom@situationinteractive.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Backstage\\": "src/"
+        }
+    },
+    "type": "wordpress-plugin",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.situationinteractive.com"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.cyruscollier.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "deliciousbrains/wp-background-processing": "*"
+    },
+    "require-dev": {
+        "cyruscollier/wp-test": "dev-master",
+        "situation/advanced-custom-fields-pro": "dev-master",
+        "situation/scripts": "dev-master",
+        "spatie/phpunit-watcher": "^1.22"
+    },
+    "scripts": {
+        "test:setup": "docker-run-mysql",
+        "test:watch": "phpunit-watcher watch < /dev/tty",
+        "test:teardown": "docker-stop-mysql",
+        "test": ["@test:setup","@test:watch","@test:teardown"]
+    },
+    "config": {
+        "process-timeout": 0
+    }
+}
