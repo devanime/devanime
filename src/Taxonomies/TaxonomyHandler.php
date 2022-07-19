@@ -1,12 +1,12 @@
 <?php
 /**
  * Class Taxonomy_Handler
- * @package Backstage\Taxonomies
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime\Taxonomies
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\Taxonomies;
+namespace DevAnime\Taxonomies;
 
 class TaxonomyHandler {
     protected $taxonomies;

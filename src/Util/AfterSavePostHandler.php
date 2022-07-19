@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\Util;
+namespace DevAnime\Util;
 
 class AfterSavePostHandler
 {

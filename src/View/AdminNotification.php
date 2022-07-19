@@ -1,14 +1,14 @@
 <?php
 /**
  * Class AdminNotification
- * @package Backstage\View
- * @author  Jeremy Strom <jstrom@situationinteractive.com>
+ * @package DevAnime\View
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
-use Backstage\Support\Flash;
+use DevAnime\Support\Flash;
 
 class AdminNotification implements View
 {
@@ -17,7 +17,7 @@ class AdminNotification implements View
     const WARNING = 'warning';
     const ERROR = 'error';
 
-    const FLASH_PREFIX = 'backstage_admin_notification';
+    const FLASH_PREFIX = 'devanime_admin_notification';
 
     protected $message;
     protected $status;

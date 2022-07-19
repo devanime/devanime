@@ -1,12 +1,12 @@
 <?php
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
-use Backstage\Models\PostBase;
+use DevAnime\Models\PostBase;
 
 /**
  * Class Link
- * @package Backstage\View
+ * @package DevAnime\View
  *
  * Immutable class representing an html <a> tag, its attributes and its content
  *

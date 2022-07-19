@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Backstage\Support;
+namespace DevAnime\Support;
 
 
 trait Singleton

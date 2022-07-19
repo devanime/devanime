@@ -1,15 +1,15 @@
 <?php
 /**
  * Class PostBase
- * @package Backstage\Models
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime\Models
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 2.0
  */
 
-namespace Backstage\Models;
+namespace DevAnime\Models;
 
-use Backstage\Support\DateTime;
-use Backstage\Util;
+use DevAnime\Support\DateTime;
+use DevAnime\Util;
 use WP_Image;
 
 /**

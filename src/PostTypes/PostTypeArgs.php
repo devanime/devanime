@@ -1,14 +1,14 @@
 <?php
 /**
  * Class CPT_Args
- * @package Backstage\Custom_Post_Types
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime\Custom_Post_Types
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\PostTypes;
+namespace DevAnime\PostTypes;
 
-use Backstage\Util;
+use DevAnime\Util;
 
 class PostTypeArgs {
     public $labels;

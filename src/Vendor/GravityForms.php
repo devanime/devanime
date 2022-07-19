@@ -1,7 +1,7 @@
 <?php
 
-namespace Backstage\Vendor;
-use Backstage\Vendor\GravityForms\GFIntegration;
+namespace DevAnime\Vendor;
+use DevAnime\Vendor\GravityForms\GFIntegration;
 
 /**
  * @deprecated
@@ -13,6 +13,6 @@ class GravityForms
 
     public function __construct()
     {
-        trigger_error('The GravityForms class hooks are now instantiated by default in Backstage.', E_USER_DEPRECATED);
+        trigger_error('The GravityForms class hooks are now instantiated by default in DevAnime.', E_USER_DEPRECATED);
     }
 }

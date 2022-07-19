@@ -1,16 +1,16 @@
 <?php
 /**
  * Class Util
- * @package Backstage
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage;
+namespace DevAnime;
 
-use Backstage\Cache\CacheController;
-use Backstage\Support\DateTime;
-use Backstage\Util\JsonManifest;
+use DevAnime\Cache\CacheController;
+use DevAnime\Support\DateTime;
+use DevAnime\Util\JsonManifest;
 
 class Util
 {

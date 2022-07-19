@@ -1,14 +1,14 @@
 <?php
 /**
  * Class ObjectBase
- * @package Backstage\Models
- * @author  ccollier
+ * @package DevAnime\Models
+ * @author  DevAnime
  * @version 2.0
  */
 
-namespace Backstage\Models;
+namespace DevAnime\Models;
 
-use Backstage\Util;
+use DevAnime\Util;
 
 abstract class ObjectBase {
 

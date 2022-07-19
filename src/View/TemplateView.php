@@ -1,9 +1,9 @@
 <?php
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
-use Backstage\Models\ObjectBase;
-use Backstage\Util;
+use DevAnime\Models\ObjectBase;
+use DevAnime\Util;
 
 abstract class TemplateView extends ObjectView implements View
 {
@@ -27,8 +27,8 @@ abstract class TemplateView extends ObjectView implements View
 
     protected function getTemplates(): array
     {
-        $templates = (array) apply_filters('backstage/view/template/' . $this->getName(), [], $this);
-        $templates = (array) apply_filters('backstage/view/template', $templates, $this);
+        $templates = (array) apply_filters('devanime/view/template/' . $this->getName(), [], $this);
+        $templates = (array) apply_filters('devanime/view/template', $templates, $this);
         $templates[] = $this->default_template;
         return array_filter($templates);
     }
@@ -58,9 +58,9 @@ abstract class TemplateView extends ObjectView implements View
         $content = Util::getTemplateScoped($templates, $scope, static::getBasePath());
         $hook_name = $this->getName();
         ob_start();
-        do_action('backstage/view/before_' . $hook_name, $this);
+        do_action('devanime/view/before_' . $hook_name, $this);
         echo (string) $content;
-        do_action('backstage/view/after_' . $hook_name, $this);
+        do_action('devanime/view/after_' . $hook_name, $this);
         return ob_get_clean();
     }
 }

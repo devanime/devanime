@@ -1,14 +1,14 @@
 <?php
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
-use Backstage\Models\Collection;
-use Backstage\Models\ObjectCollection;
-use Backstage\Util;
+use DevAnime\Models\Collection;
+use DevAnime\Models\ObjectCollection;
+use DevAnime\Util;
 
 /**
  * Class WrapperComponent
- * @package Backstage\View
+ * @package DevAnime\View
  *
  * @property ItemComponentCollection $items
  */

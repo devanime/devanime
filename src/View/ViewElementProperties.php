@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
 
 interface ViewElementProperties extends View

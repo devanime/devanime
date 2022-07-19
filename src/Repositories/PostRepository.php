@@ -1,10 +1,10 @@
 <?php
 
-namespace Backstage\Repositories;
+namespace DevAnime\Repositories;
 
-use Backstage\Models\Field;
-use Backstage\Models\PostBase;
-use Backstage\Models\PostCollection;
+use DevAnime\Models\Field;
+use DevAnime\Models\PostBase;
+use DevAnime\Models\PostCollection;
 
 class PostRepository implements Repository
 {

@@ -1,12 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: ccollier
+ * User: DevAnime
  * Date: 9/30/17
  * Time: 5:42 AM
  */
 
-namespace Backstage\Models;
+namespace DevAnime\Models;
 
 
 trait ImmutableCollectionTrait {

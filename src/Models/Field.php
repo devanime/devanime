@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\Models;
+namespace DevAnime\Models;
 
 interface Field
 {

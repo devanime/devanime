@@ -1,14 +1,14 @@
 <?php
 /**
  * Class ACFIntegration
- * @package Backstage\Vendor\AdvancedCustomFields
- * @author  Jeremy Strom <jstrom@situationinteractive.com>
+ * @package DevAnime\Vendor\AdvancedCustomFields
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\Vendor\AdvancedCustomFields;
+namespace DevAnime\Vendor\AdvancedCustomFields;
 
-use Backstage\View\Link;
+use DevAnime\View\Link;
 
 class ACFIntegration
 {
@@ -32,7 +32,7 @@ class ACFIntegration
 
     public function enforceOrder($value, $post_id, $field)
     {
-        if (! apply_filters('backstage/enforce_acf_order', true)) {
+        if (! apply_filters('devanime/enforce_acf_order', true)) {
             return $value;
         }
         if (! did_action('init')) {
@@ -48,7 +48,7 @@ class ACFIntegration
 
     public function locationRules($choices)
     {
-        $choices['backstage_disable'] = 'None';
+        $choices['devanime_disable'] = 'None';
 
         return $choices;
     }
@@ -75,8 +75,8 @@ class ACFIntegration
             $value = $link;
         }
 
-        $value = apply_filters('backstage/acf-option-shortcode/' . $field, $value, $atts, $content);
-        $value = apply_filters('backstage/acf-option-shortcode', $value, $field, $atts, $content);
+        $value = apply_filters('devanime/acf-option-shortcode/' . $field, $value, $atts, $content);
+        $value = apply_filters('devanime/acf-option-shortcode', $value, $field, $atts, $content);
 
         if( is_array($value) ) {
             $value = @implode( ', ', $value );

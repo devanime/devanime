@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\Models;
+namespace DevAnime\Models;
 
 abstract class DTO implements \JsonSerializable
 {
@@ -9,7 +9,7 @@ abstract class DTO implements \JsonSerializable
         $data = $this->getData();
         $keys = array_keys($data);
         $values = array_values($data);
-        $keys = array_map('Backstage\Util::toCamelCase', $keys);
+        $keys = array_map('DevAnime\Util::toCamelCase', $keys);
         return array_combine($keys, $values);
     }
 

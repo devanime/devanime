@@ -1,12 +1,12 @@
 <?php
 /**
  * Class Admin_Filters
- * @package Backstage\Custom_Post_Types
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime\Custom_Post_Types
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\PostTypes;
+namespace DevAnime\PostTypes;
 
 class AdminFilters {
 
@@ -34,7 +34,7 @@ class AdminFilters {
             return $val['id'];
         }, $filters);
         $filters = array_combine($keys, $filters);
-        $filters = apply_filters('backstage/admin_filters', $filters, $this->slug);
+        $filters = apply_filters('devanime/admin_filters', $filters, $this->slug);
         $filters = array_filter(array_map(function ($filter) {
             return count($filter['options']) <= 1 ? false : $filter;
         }, $filters));
@@ -85,7 +85,7 @@ class AdminFilters {
             array_walk($fields, function ($el) {
                 $el->label = (string) $el->meta_value;
             });
-            $fields = apply_filters("backstage/admin_filters/$id", $fields, $this->slug);
+            $fields = apply_filters("devanime/admin_filters/$id", $fields, $this->slug);
             foreach ($fields as $field) {
                 $filter['options'][] = [
                     'value'    => urlencode($field->meta_value),

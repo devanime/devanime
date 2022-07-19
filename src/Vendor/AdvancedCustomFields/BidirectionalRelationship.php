@@ -1,12 +1,12 @@
 <?php
 /**
  * Class ACF_Bidirectional_Relationship
- * @package Backstage\Vendor
- * @author  ccollier
+ * @package DevAnime\Vendor
+ * @author  DevAnime
  * @version 1.0
  */
 
-namespace Backstage\Vendor\AdvancedCustomFields;
+namespace DevAnime\Vendor\AdvancedCustomFields;
 
 /**
  * Converts the default ACF storage for a post relationship field

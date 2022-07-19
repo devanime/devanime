@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\Html;
+namespace DevAnime\Html;
 
 class LoadStack
 {
@@ -12,7 +12,7 @@ class LoadStack
         add_action('wp_head', [$this, 'init'], 999);
         add_action('wp_footer', [$this, 'execute'], 999);
         add_action('init', function() {
-            do_action('backstage/load_stack');
+            do_action('devanime/load_stack');
         });
     }
 

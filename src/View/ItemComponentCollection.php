@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
 class ItemComponentCollection extends ViewCollection
 {

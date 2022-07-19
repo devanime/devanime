@@ -1,15 +1,15 @@
 {
-    "name": "situation/backstage",
+    "name": "devanime/devanime",
     "description": "A plugin framework for easily creating re-usable modules across projects",
     "authors": [
         {
-            "name": "Jeremy Strom",
-            "email": "jstrom@situationinteractive.com"
+            "name": "DevAnime",
+            "email": "devanimecards@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Backstage\\": "src/"
+            "DevAnime\\": "src/"
         }
     },
     "type": "wordpress-plugin",
@@ -20,11 +20,7 @@
         },
         {
             "type": "composer",
-            "url": "https://packages.situationinteractive.com"
-        },
-        {
-            "type": "composer",
-            "url": "https://packages.cyruscollier.com"
+            "url": "https://packages.devanimecards.io"
         }
     ],
     "require": {
@@ -32,17 +28,10 @@
         "deliciousbrains/wp-background-processing": "*"
     },
     "require-dev": {
-        "cyruscollier/wp-test": "dev-master",
-        "situation/advanced-custom-fields-pro": "dev-master",
-        "situation/scripts": "dev-master",
-        "spatie/phpunit-watcher": "^1.22"
+        "devanime/advanced-custom-fields-pro": "dev-master",
+        "devanime/scripts": "dev-master"
     },
-    "scripts": {
-        "test:setup": "docker-run-mysql",
-        "test:watch": "phpunit-watcher watch < /dev/tty",
-        "test:teardown": "docker-stop-mysql",
-        "test": ["@test:setup","@test:watch","@test:teardown"]
-    },
+    "scripts": {},
     "config": {
         "process-timeout": 0
     }

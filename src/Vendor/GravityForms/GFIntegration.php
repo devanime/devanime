@@ -1,12 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: ccollier
+ * User: DevAnime
  * Date: 5/31/17
  * Time: 3:40 PM
  */
 
-namespace Backstage\Vendor\GravityForms;
+namespace DevAnime\Vendor\GravityForms;
 
 
 class GFIntegration
@@ -16,7 +16,7 @@ class GFIntegration
 
     public function __construct()
     {
-        add_action('backstage/load_stack', function() {
+        add_action('devanime/load_stack', function() {
             add_filter('gform_cdata_open', [$this, 'wrapJsOpen']);
             add_filter('gform_cdata_close', [$this, 'wrapJsClose']);
             add_filter('gform_force_hooks_js_output', function($return) {
@@ -34,7 +34,7 @@ class GFIntegration
                 return $this->replaceIdPlaceholder($form_string, $form);
             }, 10, 2);
             add_filter('gform_footer_init_scripts_filter', [$this, 'replaceIdPlaceholder'], 10, 2);
-            if (apply_filters('backstage/defer_gform_scripts', false)) {
+            if (apply_filters('devanime/defer_gform_scripts', false)) {
                 add_filter('script_loader_tag', function ($tag, $handle) {
                     if (!is_admin() && 0 === strpos($handle, 'gform_')) {
                         $tag = str_replace(' src=', ' data-gform-src=', $tag);

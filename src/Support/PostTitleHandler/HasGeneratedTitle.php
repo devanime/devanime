@@ -1,11 +1,11 @@
 <?php
 
-namespace Backstage\Support\PostTitleHandler;
+namespace DevAnime\Support\PostTitleHandler;
 
 /**
  * Interface HasGeneratedTitle
- * @package Backstage\Support\PostTitleHandler
- * @author Vincent Ragosta <vragosta@situationinteractive.com>
+ * @package DevAnime\Support\PostTitleHandler
+ * @author DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 interface HasGeneratedTitle

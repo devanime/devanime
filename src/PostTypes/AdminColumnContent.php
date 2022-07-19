@@ -1,20 +1,20 @@
 <?php
 /**
  * Class Admin_Column_Content
- * @package Backstage\Custom_Post_Types
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime\Custom_Post_Types
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\PostTypes;
+namespace DevAnime\PostTypes;
 
 class AdminColumnContent {
 
     public function __construct() {
-        add_filter('backstage/admin_col', [$this, 'postMeta'], 5, 3);
-        add_filter('backstage/admin_col/thumbnail', [$this, 'postThumbnail'], 5, 2);
-        add_filter('backstage/admin_col/editor', [$this, 'editor'], 5, 2);
-        add_filter('backstage/admin_col/excerpt', [$this, 'excerpt'], 5, 2);
+        add_filter('devanime/admin_col', [$this, 'postMeta'], 5, 3);
+        add_filter('devanime/admin_col/thumbnail', [$this, 'postThumbnail'], 5, 2);
+        add_filter('devanime/admin_col/editor', [$this, 'editor'], 5, 2);
+        add_filter('devanime/admin_col/excerpt', [$this, 'excerpt'], 5, 2);
     }
 
     public function postMeta($content, $post_id, $column_id) {

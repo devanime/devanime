@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
 use ReflectionClass, Throwable;
 
@@ -10,7 +10,7 @@ use ReflectionClass, Throwable;
  * @property array $class_modifiers
  * @property array $element_attributes
  *
- * @package Backstage\View
+ * @package DevAnime\View
  */
 abstract class Component extends TemplateView implements ViewElementProperties
 {

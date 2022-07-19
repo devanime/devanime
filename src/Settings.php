@@ -1,10 +1,10 @@
 <?php
 
-namespace Backstage;
+namespace DevAnime;
 /**
  * Class Settings
- * @package Backstage
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  * @property string $ver                  Plugin version number
  * @property string $base_dir             Base plugin directory

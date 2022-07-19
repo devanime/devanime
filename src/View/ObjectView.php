@@ -1,9 +1,9 @@
 <?php
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
-use Backstage\Models\ObjectBase;
-use Backstage\Util;
+use DevAnime\Models\ObjectBase;
+use DevAnime\Util;
 
 abstract class ObjectView extends ObjectBase implements View
 {

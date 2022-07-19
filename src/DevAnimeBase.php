@@ -1,14 +1,14 @@
 <?php
 /**
- * Class Backstage_Base
- * @package Backstage
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * Class DevAnime_Base
+ * @package DevAnime
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage;
+namespace DevAnime;
 
-class BackstageBase {
+class DevAnimeBase {
     protected static $_settings = [];
     protected $_config;
     protected static $_default_settings = [];

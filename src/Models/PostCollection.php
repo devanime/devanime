@@ -1,11 +1,11 @@
 <?php
 
-namespace Backstage\Models;
+namespace DevAnime\Models;
 
 /**
  * Class PostCollection
- * @package Backstage\Models
- * @author Cyrus Collier <ccollier@situationinteractive.com>
+ * @package DevAnime\Models
+ * @author DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 class PostCollection extends ObjectCollection

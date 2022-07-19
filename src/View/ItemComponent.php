@@ -1,13 +1,13 @@
 <?php
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
-use Backstage\Models\PostBase;
-use Backstage\View\Component;
+use DevAnime\Models\PostBase;
+use DevAnime\View\Component;
 
 /**
  * Class ItemComponent
- * @package Backstage\View
+ * @package DevAnime\View
  *
  * @property ParentComponent $parent
  */

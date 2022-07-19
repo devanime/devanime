@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\Controller;
+namespace DevAnime\Controller;
 
 use WP_REST_Request;
 

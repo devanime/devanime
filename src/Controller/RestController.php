@@ -1,8 +1,8 @@
 <?php
 
-namespace Backstage\Controller;
+namespace DevAnime\Controller;
 
-use Backstage\Util;
+use DevAnime\Util;
 use WP_REST_Server, WP_REST_Request, WP_Error;
 
 abstract class RestController

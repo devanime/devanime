@@ -1,8 +1,8 @@
 <?php
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
-use Backstage\Models\ObjectCollection;
+use DevAnime\Models\ObjectCollection;
 
 class ViewCollection extends ObjectCollection implements View
 {

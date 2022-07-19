@@ -1,12 +1,12 @@
 <?php
 /**
  * Class Term_Base
- * @package Backstage\Models
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime\Models
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\Models;
+namespace DevAnime\Models;
 
 class TermBase {
 

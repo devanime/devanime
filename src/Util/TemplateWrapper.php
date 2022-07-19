@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\Util;
+namespace DevAnime\Util;
 
 /**
  * Theme wrapper
@@ -35,7 +35,7 @@ class TemplateWrapper
 
     public function __toString()
     {
-        $this->templates = apply_filters('backstage/theme/wrap_' . $this->slug, $this->templates);
+        $this->templates = apply_filters('devanime/theme/wrap_' . $this->slug, $this->templates);
 
         return locate_template($this->templates);
     }

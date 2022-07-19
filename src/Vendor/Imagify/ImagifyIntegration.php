@@ -1,11 +1,11 @@
 <?php
 /**
  * Class ImagifyIntegration
- * @author  Jeremy Strom <jstrom@situationinteractive.com>
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\Vendor\Imagify;
+namespace DevAnime\Vendor\Imagify;
 
 class ImagifyIntegration
 {

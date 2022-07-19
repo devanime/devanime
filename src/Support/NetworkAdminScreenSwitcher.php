@@ -1,10 +1,10 @@
 <?php
 
-namespace Backstage\Support;
+namespace DevAnime\Support;
 
 /**
  * Class NetworkAdminScreenSwitcher
- * @package Backstage\Support
+ * @package DevAnime\Support
  */
 class NetworkAdminScreenSwitcher
 {

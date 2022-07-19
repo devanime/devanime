@@ -11,10 +11,10 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
 }
 
 // ===================================================
-// Initialize Situation defaults
+// Initialize DevAnime defaults
 // ===================================================
-if (class_exists('\Situation\WPConfig')) {
-    $Config = new \Situation\WPConfig(__DIR__);
+if (class_exists('\DevAnime\WPConfig')) {
+    $Config = new \DevAnime\WPConfig(__DIR__);
     $Config->waitForTestDb();
 }
 

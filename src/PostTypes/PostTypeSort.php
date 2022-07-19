@@ -1,12 +1,12 @@
 <?php
 /**
  * Class CPT_Sort
- * @package Backstage\Custom_Post_Types
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime\Custom_Post_Types
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\PostTypes;
+namespace DevAnime\PostTypes;
 
 class PostTypeSort {
     protected $default_sort, $admin_sort;
@@ -99,7 +99,7 @@ class PostTypeSort {
             'orderby'  => 'meta_value',
             'meta_key' => $orderby
         ];
-        $query_params = apply_filters('backstage/admin_sort/' . $orderby, $query_params, $this->slug);
+        $query_params = apply_filters('devanime/admin_sort/' . $orderby, $query_params, $this->slug);
         foreach ($query_params as $key => $query_param) {
             $query->set($key, $query_param);
         }
@@ -148,7 +148,7 @@ class PostTypeSort {
      * @param $post_obj
      */
     public function savePost($post_id, $post_obj) {
-        if (!apply_filters('backstage/save_post/increment_menu_order', true, $post_obj)) {
+        if (!apply_filters('devanime/save_post/increment_menu_order', true, $post_obj)) {
             return;
         }
         if (!isset($_POST['post_type']) || $this->slug != $_POST['post_type']) {

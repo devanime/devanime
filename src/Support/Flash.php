@@ -1,12 +1,12 @@
 <?php
 /**
  * Class Flash
- * @package Backstage\Support
- * @author  Cyrus Collier <ccollier@situationinteractive.com>
+ * @package DevAnime\Support
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\Support;
+namespace DevAnime\Support;
 
 class Flash
 {

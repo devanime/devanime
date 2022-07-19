@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Backstage\Models;
+namespace DevAnime\Models;
 
 
 class Page extends PostBase

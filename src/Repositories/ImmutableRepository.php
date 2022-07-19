@@ -1,9 +1,9 @@
 <?php
 
-namespace Backstage\Repositories;
+namespace DevAnime\Repositories;
 
-use Backstage\Models\Field;
-use Backstage\Models\PostBase;
+use DevAnime\Models\Field;
+use DevAnime\Models\PostBase;
 
 interface ImmutableRepository {
 

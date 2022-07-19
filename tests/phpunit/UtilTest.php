@@ -1,8 +1,8 @@
 <?php
 
-namespace Test\Backstage;
+namespace Test\DevAnime;
 
-use Backstage\Util;
+use DevAnime\Util;
 use WPTest\Test\TestCase;
 
 class UtilTest extends TestCase

@@ -1,13 +1,13 @@
 <?php
 
-namespace Backstage\Support\PostTitleHandler;
+namespace DevAnime\Support\PostTitleHandler;
 
-use Backstage\Models\PostFactory;
+use DevAnime\Models\PostFactory;
 
 /**
  * Class PostTitleHandler
- * @package Backstage\Support
- * @author Vincent Ragosta <vragosta@situationinteractive.com>
+ * @package DevAnime\Support
+ * @author DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 class PostTitleHandler

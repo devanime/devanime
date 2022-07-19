@@ -1,12 +1,12 @@
 <?php
 
-namespace Backstage\Models;
-use Backstage\Support\Singleton;
-use Backstage\Util;
+namespace DevAnime\Models;
+use DevAnime\Support\Singleton;
+use DevAnime\Util;
 
 /**
  * class OptionsBase
- * @package Backstage\Models
+ * @package DevAnime\Models
  *
  * Usage (ex. for options key 'event_date_format'):
  *

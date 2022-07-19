@@ -1,12 +1,12 @@
 <?php
 /**
  * Class Post_Generic
- * @package Backstage\Models
- * @author  ccollier
+ * @package DevAnime\Models
+ * @author  DevAnime
  * @version 1.0
  */
 
-namespace Backstage\Models;
+namespace DevAnime\Models;
 
 
 class PostGeneric extends PostBase {

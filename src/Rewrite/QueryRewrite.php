@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\Rewrite;
+namespace DevAnime\Rewrite;
 
 class QueryRewrite extends Rewrite
 {

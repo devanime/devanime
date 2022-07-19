@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Backstage\Html;
+namespace DevAnime\Html;
 
 
 class EditorStyles
@@ -23,7 +23,7 @@ class EditorStyles
     }
 
     public function addStyleFormats($init) {
-        $style_formats = apply_filters('backstage/editor-styles', $this->style_formats);
+        $style_formats = apply_filters('devanime/editor-styles', $this->style_formats);
         $init['style_formats'] = json_encode(array_values($style_formats));
         if (!$this->enable_all_heading_levels) {
             $init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;';

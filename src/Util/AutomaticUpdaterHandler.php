@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Backstage\Util;
+namespace DevAnime\Util;
 
 
 class AutomaticUpdaterHandler
@@ -25,6 +25,6 @@ class AutomaticUpdaterHandler
     {
         return
             defined('AUTOMATIC_UPDATER_DISABLED') && AUTOMATIC_UPDATER_DISABLED &&
-            defined('BACKSTAGE_AUTOMATIC_UPDATER_HANDLER') && BACKSTAGE_AUTOMATIC_UPDATER_HANDLER;
+            defined('DEVANIME_AUTOMATIC_UPDATER_HANDLER') && DEVANIME_AUTOMATIC_UPDATER_HANDLER;
     }
 }

@@ -1,15 +1,16 @@
 <?php
 
-namespace Backstage;
+namespace DevAnime;
 
-use Backstage\Html\LoadStack;
-use Backstage\Util\TemplateWrapper;
-use Backstage\Util\UploadSVG;
+use DevAnime\Html\LoadStack;
+use DevAnime\Util\TemplateWrapper;
+use DevAnime\Util\UploadSVG;
 
 /**
  * Class Theme
- * @package Backstage
- * @author  ccollier
+ * @package DevAnime
+ * @author  DevAnime <devanimecards@gmail.com>
+ * @version 1.0
  */
 class Theme
 {

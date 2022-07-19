@@ -1,14 +1,14 @@
 <?php
 
-namespace Backstage\Models;
+namespace DevAnime\Models;
 
 use ArrayIterator, InvalidArgumentException;
-use Backstage\Producers\RelatedContent\RelatedContent;
+use DevAnime\Producers\RelatedContent\RelatedContent;
 
 /**
  * Class ObjectCollection
- * @package Backstage\Models
- * @author Cyrus Collier <ccollier@situationinteractive.com>
+ * @package DevAnime\Models
+ * @author DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 abstract class ObjectCollection extends ImmutableCollection

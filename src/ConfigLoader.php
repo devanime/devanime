@@ -1,12 +1,12 @@
 <?php
 /**
  * Class Config_Loader
- * @package Backstage
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage;
+namespace DevAnime;
 
 class ConfigLoader {
     protected $config_files = [];
@@ -17,7 +17,7 @@ class ConfigLoader {
     }
 
     public function initConfig() {
-        $this->config_files = array_values(array_filter(apply_filters('backstage/register_config', []), 'file_exists'));
+        $this->config_files = array_values(array_filter(apply_filters('devanime/register_config', []), 'file_exists'));
         if (!empty($this->config_files)) {
             $this->data = $this->applyFilters(
                 $this->compileFileData([
@@ -45,8 +45,8 @@ class ConfigLoader {
     protected function applyFilters($data) {
         foreach ($data as $type => $list) {
             foreach ($list as $key => $value) {
-                $list[$key] = apply_filters('backstage/config', $value, $key, $type);
-                do_action('backstage/register', $list[$key], $key, $type);
+                $list[$key] = apply_filters('devanime/config', $value, $key, $type);
+                do_action('devanime/register', $list[$key], $key, $type);
             }
             $data[$type] = array_filter($list);
         }

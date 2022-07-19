@@ -1,12 +1,12 @@
 <?php
 /**
  * Class Register_Option
- * @package Backstage\Options
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime\Options
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\Options;
+namespace DevAnime\Options;
 
 class RegisterOption {
     protected $slug, $args, $children;
@@ -21,7 +21,7 @@ class RegisterOption {
         }
         $this->children = $data['child_pages'] ?? [];
         unset($data['child_pages']);
-        $defaults = apply_filters('backstage/register_options/defaults', [
+        $defaults = apply_filters('devanime/register_options/defaults', [
             'menu_slug' => sanitize_title('acf-' . $data['page_title']),
             'capability' => 'manage_options'
         ]);

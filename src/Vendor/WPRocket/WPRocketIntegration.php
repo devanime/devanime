@@ -1,12 +1,12 @@
 <?php
 /**
  * Class WPRocketIntegration
- * @package Backstage\Vendor\WPRocket
- * @author  Jeremy Strom <jstrom@situationinteractive.com>
+ * @package DevAnime\Vendor\WPRocket
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\Vendor\WPRocket;
+namespace DevAnime\Vendor\WPRocket;
 
 class WPRocketIntegration
 {

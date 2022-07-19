@@ -1,8 +1,8 @@
 <?php
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
-use Backstage\Util;
+use DevAnime\Util;
 
 class ListView implements View
 {

@@ -1,12 +1,12 @@
 <?php
 /**
  * Class YoastSEOIntegration
- * @package Backstage\Vendor\Yoast
- * @author  Jeremy Strom <jstrom@situationinteractive.com>
+ * @package DevAnime\Vendor\Yoast
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\Vendor\Yoast;
+namespace DevAnime\Vendor\Yoast;
 
 class YoastSEOIntegration
 {

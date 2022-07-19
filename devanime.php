@@ -1,21 +1,21 @@
 <?php
 /*
-Plugin Name: Backstage
+Plugin Name: DevAnime
 Description: A plugin framework for easily creating re-usable modules across projects.
 Version: 9999
 License: GPL-2.0+
 */
 
-use Backstage\ConfigLoader;
-use Backstage\Vendor\VendorIntegrationController;
-use Backstage\Cache\CacheController;
-use Backstage\FactoryLoader;
-use Backstage\PostTypes\PostTypeHandler;
-use Backstage\Options\RegisterOption;
-use Backstage\Taxonomies\TaxonomyHandler;
-use Backstage\Util\PermalinksManager;
-use Backstage\Util\AfterSavePostHandler;
-use Backstage\Util\AutomaticUpdaterHandler;
+use DevAnime\ConfigLoader;
+use DevAnime\Vendor\VendorIntegrationController;
+use DevAnime\Cache\CacheController;
+use DevAnime\FactoryLoader;
+use DevAnime\PostTypes\PostTypeHandler;
+use DevAnime\Options\RegisterOption;
+use DevAnime\Taxonomies\TaxonomyHandler;
+use DevAnime\Util\PermalinksManager;
+use DevAnime\Util\AfterSavePostHandler;
+use DevAnime\Util\AutomaticUpdaterHandler;
 
 // Exit if accessed directly
 defined('ABSPATH') || exit;
@@ -23,13 +23,13 @@ if (! defined('USE_COMPOSER_AUTOLOADER') || ! USE_COMPOSER_AUTOLOADER) {
     require __DIR__ . '/vendor/autoload.php';
 }
 
-class Backstage {
+class DevAnime {
 
 
     public function __construct() {
-        add_action('backstage/register', [$this, 'register'], 10, 3);
+        add_action('devanime/register', [$this, 'register'], 10, 3);
         add_action('plugins_loaded', function () {
-            do_action('backstage/init');
+            do_action('devanime/init');
         });
         new ConfigLoader();
         new VendorIntegrationController();
@@ -55,5 +55,5 @@ class Backstage {
     }
 }
 
-new Backstage();
+new DevAnime();
 

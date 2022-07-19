@@ -1,15 +1,15 @@
 <?php
 /**
  * Class Config_Loader
- * @package Backstage
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage;
+namespace DevAnime;
 
-use Backstage\Models\PostFactory;
-use Backstage\Models\TermFactory;
+use DevAnime\Models\PostFactory;
+use DevAnime\Models\TermFactory;
 
 class FactoryLoader {
     protected $post_type_models = [];
@@ -21,11 +21,11 @@ class FactoryLoader {
     }
 
     public function initFactories() {
-        $this->post_type_models = array_values(array_filter(apply_filters('backstage/register_post_type_models', [])));
+        $this->post_type_models = array_values(array_filter(apply_filters('devanime/register_post_type_models', [])));
         foreach ($this->post_type_models as $model_class) {
             PostFactory::registerPostModel($model_class);
         }
-        $this->taxonomy_models = array_values(array_filter(apply_filters('backstage/register_taxonomy_models', [])));
+        $this->taxonomy_models = array_values(array_filter(apply_filters('devanime/register_taxonomy_models', [])));
         foreach ($this->taxonomy_models as $model_class) {
             TermFactory::registerTermModel($model_class);
         }

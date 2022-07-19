@@ -1,12 +1,12 @@
 <?php
 /**
  * Class CPT_Admin_Columns
- * @package Backstage\Custom_Post_Types
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime\Custom_Post_Types
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\PostTypes;
+namespace DevAnime\PostTypes;
 
 class PostTypeAdminColumns {
 
@@ -56,17 +56,17 @@ class PostTypeAdminColumns {
                 'cb',
                 'title'
             ]), $headers, $get_defaults($taxonomies), $get_defaults(['author', 'comments', 'date']));
-        $columns = apply_filters("backstage/admin_columns", $columns, $this->slug);
+        $columns = apply_filters("devanime/admin_columns", $columns, $this->slug);
 
         return $columns;
     }
 
     public function printAdminStyles() {
-        if (apply_filters('backstage/print_admin_styles', true)) {
+        if (apply_filters('devanime/print_admin_styles', true)) {
             $screen = get_current_screen();
             if ($screen->id === 'edit-' . $this->slug) {
                 echo '<style type="text/css">';
-                echo apply_filters('backstage/print_admin_styles/' . $this->slug, '.column-thumbnail { text-align: center; width:75px; } .column-thumbnail img{ display:block;margin: 0 auto;max-width:100%; height:auto; }');
+                echo apply_filters('devanime/print_admin_styles/' . $this->slug, '.column-thumbnail { text-align: center; width:75px; } .column-thumbnail img{ display:block;margin: 0 auto;max-width:100%; height:auto; }');
                 echo '</style>';
             }
         }
@@ -76,20 +76,20 @@ class PostTypeAdminColumns {
         if (!array_key_exists($column_id, $this->columns)) {
             return false;
         }
-        $filter_base = 'backstage/admin_col';
+        $filter_base = 'devanime/admin_col';
         $content = '';
         /**
-         * add_filter('backstage/admin_col', 'my_func', 10, 4);
+         * add_filter('devanime/admin_col', 'my_func', 10, 4);
          * function my_func($content, $post_id, $column_id, $post_type){ return $content; }
          */
         $content = apply_filters($filter_base, $content, $post_id, $column_id, $this->slug);
         /**
-         * add_filter('backstage/admin_col/{{column_key}}', 'my_func', 10, 3);
+         * add_filter('devanime/admin_col/{{column_key}}', 'my_func', 10, 3);
          * function my_func($content, $post_id, $post_type){ return $content; }
          */
         $content = apply_filters($filter_base . '/' . $column_id, $content, $post_id, $this->slug);
         /**
-         * add_filter('backstage/admin_col/{{column_key}}/{{post_type}}', 'my_func', 10, 2);
+         * add_filter('devanime/admin_col/{{column_key}}/{{post_type}}', 'my_func', 10, 2);
          * function my_func($content, $post_id){ return $content; }
          */
         $content = apply_filters($filter_base . '/' . $column_id . '/' . $this->slug, $content, $post_id);

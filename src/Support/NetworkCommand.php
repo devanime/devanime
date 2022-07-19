@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\Support;
+namespace DevAnime\Support;
 
 class NetworkCommand
 {

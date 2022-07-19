@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstage\Models;
+namespace DevAnime\Models;
 
 abstract class DTOCollection extends ObjectCollection implements \JsonSerializable
 {

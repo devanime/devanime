@@ -1,12 +1,12 @@
 <?php
 /**
  * Class JsonManifest
- * @package Backstage\Util
- * @author  Jeremy Strom <jeremy.strom@gmail.com>
+ * @package DevAnime\Util
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\Util;
+namespace DevAnime\Util;
 
 class JsonManifest
 {

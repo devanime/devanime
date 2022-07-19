@@ -1,10 +1,10 @@
 <?php
 
-namespace Backstage\View;
+namespace DevAnime\View;
 
 /**
  * Trait ViewElementPropertiesTrait
- * @package Backstage\View
+ * @package DevAnime\View
  *
  * @property array $class_modifiers
  * @property array $element_attributes

@@ -1,17 +1,17 @@
 <?php
 /**
  * Class CacheController
- * @package Backstage\Cache
- * @author  Jeremy Strom <jstrom@situationinteractive.com>
+ * @package DevAnime\Cache
+ * @author  DevAnime <devanimecards@gmail.com>
  * @version 1.0
  */
 
-namespace Backstage\Cache;
+namespace DevAnime\Cache;
 
 class CacheController
 {
-    const CACHE_CLEAR_TRANSIENT = 'backstage_cache_clear';
-    const CACHE_LOCK_TRANSIENT  = 'backstage_cache_lock';
+    const CACHE_CLEAR_TRANSIENT = 'devanime_cache_clear';
+    const CACHE_LOCK_TRANSIENT  = 'devanime_cache_lock';
     const CACHE_PROPAGATION_SCRIPT_PATH = '/deploy/scripts/post_deploy.sh';
     const DEFAULT_CACHE_CLEAR_TTL = 300;
 
@@ -35,7 +35,7 @@ class CacheController
         add_filter('rocket_cache_reject_wp_rest_api', '__return_false');
         add_filter('do_rocket_generate_caching_files', [$this, 'shouldCacheFiles']);
         add_filter('cloudflare_purge_everything_actions', function ($actions) {
-            return array_merge($actions ?: [], ['after_rocket_clean_domain', 'backstage/trigger_cloudflare_purge']);
+            return array_merge($actions ?: [], ['after_rocket_clean_domain', 'devanime/trigger_cloudflare_purge']);
         });
     }
 
@@ -43,10 +43,10 @@ class CacheController
     {
         $uploads = wp_upload_dir();
         $this->cache_file = $uploads['basedir'] . '/.clear-cache';
-        foreach ((array) apply_filters('backstage/cache/clear-hooks', $this->clear_cache_hooks) as $hook) {
+        foreach ((array) apply_filters('devanime/cache/clear-hooks', $this->clear_cache_hooks) as $hook) {
             add_action($hook, [__CLASS__, 'flagCacheClear']);
         }
-        $this->cache_clear_ttl = apply_filters('backstage/cache/clear-ttl', static::DEFAULT_CACHE_CLEAR_TTL);
+        $this->cache_clear_ttl = apply_filters('devanime/cache/clear-ttl', static::DEFAULT_CACHE_CLEAR_TTL);
         $this->maybeFlushCache();
     }
 
@@ -61,7 +61,7 @@ class CacheController
 
     public function clearAllCache()
     {
-        do_action('backstage/before_cache_clear');
+        do_action('devanime/before_cache_clear');
         /**
          * Slave servers can't clear cache directly
          */
@@ -73,10 +73,10 @@ class CacheController
             rocket_clean_domain();
         } else {
             wp_cache_flush();
-            do_action('backstage/trigger_cloudflare_purge');
+            do_action('devanime/trigger_cloudflare_purge');
         }
         $this->log('Cache cleared');
-        do_action('backstage/after_cache_clear');
+        do_action('devanime/after_cache_clear');
     }
 
     /**
