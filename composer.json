@@ -1,6 +1,6 @@
 {
     "name": "devanime/devanime",
-    "description": "A plugin framework for easily creating re-usable modules across projects",
+    "description": "The backend infrastructure used as the \"build base\" for all new projects.",
     "authors": [
         {
             "name": "DevAnime",
