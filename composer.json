@@ -29,7 +29,7 @@
     },
     "require-dev": {
         "devanime/advanced-custom-fields-pro": "dev-master",
-        "devanime/scripts": "dev-master"
+        "devanime/eren-yeager": "dev-master"
     },
     "scripts": {},
     "config": {
