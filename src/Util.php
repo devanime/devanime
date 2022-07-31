@@ -804,4 +804,10 @@ class Util
 
         return $dist_path . $found_path;
     }
+
+    public static function randomString($length = 10, $replace_key = '')
+    {
+        $key = $replace_key ? $replace_key : '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        return substr(str_shuffle(str_repeat($key, ceil($length / strlen($key)))), 1, $length);
+    }
 }
