@@ -1,13 +1,13 @@
 <?php
+
+namespace DevAnime\Controller;
+
 /**
- * Class CacheController
- * @package DevAnime\Cache
- * @author  DevAnime <devanimecards@gmail.com>
- * @version 1.0
+ * class CacheController
+ * @package DevAnime\Controller
+ *
+ * @TODO unused
  */
-
-namespace DevAnime\Cache;
-
 class CacheController
 {
     const CACHE_CLEAR_TRANSIENT = 'devanime_cache_clear';

@@ -2,20 +2,12 @@
 /*
 Plugin Name: DevAnime
 Description: A plugin framework for easily creating re-usable modules across projects.
-Version: 9999
+Version: 1.0
 License: GPL-2.0+
 */
 
-use DevAnime\ConfigLoader;
-use DevAnime\Vendor\VendorIntegrationController;
-use DevAnime\Cache\CacheController;
-use DevAnime\FactoryLoader;
-use DevAnime\PostTypes\PostTypeHandler;
-use DevAnime\Options\RegisterOption;
-use DevAnime\Taxonomies\TaxonomyHandler;
-use DevAnime\Util\PermalinksManager;
-use DevAnime\Util\AfterSavePostHandler;
-use DevAnime\Util\AutomaticUpdaterHandler;
+use DevAnime\Controller;
+use DevAnime\Register;
 
 // Exit if accessed directly
 defined('ABSPATH') || exit;
@@ -25,31 +17,55 @@ if (! defined('USE_COMPOSER_AUTOLOADER') || ! USE_COMPOSER_AUTOLOADER) {
 
 class DevAnime {
 
+    const LIVE_CONTROLLERS = [
+        Controller\RegisterConfigController::class,
+        Controller\PostController::class,
+        Controller\AcfController::class,
+        Controller\PermalinksController::class,
+        Controller\AutomaticUpdatesController::class,
+        Controller\FactoryController::class,
+    ];
 
     public function __construct() {
         add_action('devanime/register', [$this, 'register'], 10, 3);
         add_action('plugins_loaded', function () {
             do_action('devanime/init');
         });
-        new ConfigLoader();
-        new VendorIntegrationController();
-        new CacheController();
-        new FactoryLoader();
-        new PermalinksManager();
-        new AfterSavePostHandler();
-        new AutomaticUpdaterHandler();
+
+        foreach(static::LIVE_CONTROLLERS as $Controller) {
+            new $Controller();
+        }
+
+//        new Controller\RegisterConfigController();
+//        new Controller\PostController();
+//        new Controller\AcfController();
+//        new Controller\PermalinksController();
+//        new Controller\AutomaticUpdatesController();
+//        new Controller\FactoryController();
+
+        //
+
+//        new ConfigLoader();
+//        new PermalinksManager();
+//        new AfterSavePostHandler();
+//        new AutomaticUpdaterHandler();
+//        new FactoryLoader();
+
+        // TODO lost complete support for these atm
+//        new VendorIntegrationController();
+//        new CacheController();
     }
 
     public function register($data, $key, $type) {
         switch ($type) {
             case 'options':
-                new RegisterOption($data);
+                new Register\RegisterOption($data);
                 break;
             case 'custom_post_types':
-                new PostTypeHandler($key, $data);
+                new Register\RegisterPostType($key, $data);
                 break;
             case 'taxonomies':
-                new TaxonomyHandler($key, $data);
+                new Register\RegisterTaxonomy($key, $data);
                 break;
         }
     }

@@ -1,10 +1,12 @@
 <?php
 
+namespace DevAnime\Controller;
 
-namespace DevAnime\Util;
-
-
-class AutomaticUpdaterHandler
+/**
+ * class AutomaticUpdatesController
+ * @package DevAnime\Controller
+ */
+class AutomaticUpdatesController
 {
     public function __construct()
     {

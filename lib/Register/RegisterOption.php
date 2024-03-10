@@ -1,18 +1,17 @@
 <?php
+
+namespace DevAnime\Register;
+
 /**
- * Class Register_Option
- * @package DevAnime\Options
- * @author  DevAnime <devanimecards@gmail.com>
- * @version 1.0
+ * class RegisterOption
+ * @package DevAnime\Register
  */
-
-namespace DevAnime\Options;
-
-class RegisterOption {
+class RegisterOption
+{
     protected $slug, $args, $children;
 
-
-    public function __construct($data) {
+    public function __construct($data)
+    {
         if (!function_exists('acf_add_options_page')) {
             return;
         }
@@ -27,7 +26,7 @@ class RegisterOption {
         ]);
         $this->args = wp_parse_args($data, $defaults);
         if (isset($this->args['position'])) {
-            $this->args['position'] = (string) $this->args['position'];
+            $this->args['position'] = (string)$this->args['position'];
         }
         acf_add_options_page($this->args);
         foreach ($this->children as $slug => $args) {

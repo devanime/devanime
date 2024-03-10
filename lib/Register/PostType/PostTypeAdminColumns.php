@@ -1,24 +1,24 @@
 <?php
+
+namespace DevAnime\Register\PostType;
+
 /**
- * Class CPT_Admin_Columns
- * @package DevAnime\Custom_Post_Types
- * @author  DevAnime <devanimecards@gmail.com>
- * @version 1.0
+ * class PostTypeAdminColumns
+ * @package DevAnime\Register\PostType
  */
-
-namespace DevAnime\PostTypes;
-
-class PostTypeAdminColumns {
-
+class PostTypeAdminColumns
+{
     private $slug, $register, $columns = [];
 
-    public function __construct($slug, PostTypeArgs $register) {
+    public function __construct($slug, PostTypeArguments $register)
+    {
         $this->slug = $slug;
         $this->register = $register;
         add_action('manage_edit-' . $this->slug . '_sortable_columns', [$this, 'sortableColumns']);
     }
 
-    public function init($columns) {
+    public function init($columns)
+    {
         $this->columns = $columns;
         add_filter('manage_' . $this->slug . '_posts_columns', [$this, 'columnHeaders']);
         add_action('manage_' . $this->slug . '_posts_custom_column', [$this, 'columnContent'], 10, 2);
@@ -32,7 +32,8 @@ class PostTypeAdminColumns {
      *
      * @return array
      */
-    public function columnHeaders($columns) {
+    public function columnHeaders($columns)
+    {
         $headers = $taxonomies = [];
 
         foreach ($this->columns as $slug => $column) {
@@ -45,7 +46,7 @@ class PostTypeAdminColumns {
                 $taxonomies[] = $slug;
             }
         }
-        $get_defaults = function($arr) use ($columns, $headers) {
+        $get_defaults = function ($arr) use ($columns, $headers) {
             /* Pulls default columns out if exists in custom columns list */
             return array_intersect_key($columns, array_diff_key(array_flip($arr), $headers));
         };
@@ -61,7 +62,8 @@ class PostTypeAdminColumns {
         return $columns;
     }
 
-    public function printAdminStyles() {
+    public function printAdminStyles()
+    {
         if (apply_filters('devanime/print_admin_styles', true)) {
             $screen = get_current_screen();
             if ($screen->id === 'edit-' . $this->slug) {
@@ -72,7 +74,8 @@ class PostTypeAdminColumns {
         }
     }
 
-    public function columnContent($column_id, $post_id) {
+    public function columnContent($column_id, $post_id)
+    {
         if (!array_key_exists($column_id, $this->columns)) {
             return false;
         }
@@ -106,7 +109,8 @@ class PostTypeAdminColumns {
         echo $content;
     }
 
-    public function sortableColumns($columns) {
+    public function sortableColumns($columns)
+    {
         if (!empty($this->register->args['taxonomies'])) {
             if (is_array($this->register->args['taxonomies'])) {
                 foreach ($this->register->args['taxonomies'] as $taxonomy) {
@@ -124,6 +128,4 @@ class PostTypeAdminColumns {
 
         return $columns;
     }
-
-
 }

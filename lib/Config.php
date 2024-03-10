@@ -1,13 +1,11 @@
 <?php
-/**
- * Class Config
- * @package DevAnime
- * @author  DevAnime <devanimecards@gmail.com>
- * @version 1.0
- */
 
 namespace DevAnime;
 
+/**
+ * Class Config
+ * @package DevAnime
+ */
 class Config
 {
     protected $_config;

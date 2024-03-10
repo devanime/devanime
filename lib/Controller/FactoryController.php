@@ -1,17 +1,15 @@
 <?php
-/**
- * Class Config_Loader
- * @package DevAnime
- * @author  DevAnime <devanimecards@gmail.com>
- * @version 1.0
- */
 
-namespace DevAnime;
+namespace DevAnime\Controller;
 
 use DevAnime\Models\PostFactory;
 use DevAnime\Models\TermFactory;
 
-class FactoryLoader {
+/**
+ * class FactoryController
+ * @package DevAnime\Controller
+ */
+class FactoryController {
     protected $post_type_models = [];
     protected $taxonomy_models = [];
     protected $data;

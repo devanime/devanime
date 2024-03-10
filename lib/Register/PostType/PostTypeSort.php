@@ -1,18 +1,18 @@
 <?php
+
+namespace DevAnime\Register\PostType;
+
 /**
- * Class CPT_Sort
- * @package DevAnime\Custom_Post_Types
- * @author  DevAnime <devanimecards@gmail.com>
- * @version 1.0
+ * class PostTypeSort
+ * @package DevAnime\Register\PostType
  */
-
-namespace DevAnime\PostTypes;
-
-class PostTypeSort {
+class PostTypeSort
+{
     protected $default_sort, $admin_sort;
     private $slug, $register, $cmspo_label, $columns = [];
 
-    public function __construct($slug, PostTypeArgs $register) {
+    public function __construct($slug, PostTypeArguments $register)
+    {
         $this->slug = $slug;
         $this->register = $register;
         $this->cmspoLabel('Sort ' . $this->register->labels['name']);
@@ -23,25 +23,29 @@ class PostTypeSort {
         add_action('save_post', [$this, 'savePost'], 13, 2);
     }
 
-    public function setColumns($columns) {
+    public function setColumns($columns)
+    {
         $this->columns = $columns;
     }
 
     /**
      * @param mixed $default_sort
      */
-    public function setDefaultSort($default_sort) {
+    public function setDefaultSort($default_sort)
+    {
         $this->default_sort = $default_sort;
     }
 
     /**
      * @param mixed $admin_sort
      */
-    public function setAdminSort($admin_sort) {
+    public function setAdminSort($admin_sort)
+    {
         $this->admin_sort = $admin_sort;
     }
 
-    public function preGetPosts(\WP_Query $query) {
+    public function preGetPosts(\WP_Query $query)
+    {
         if ($query->get('post_type') !== $this->slug) {
             return;
         }
@@ -59,7 +63,7 @@ class PostTypeSort {
                 }
             }
         } else {
-            if (!empty($this->default_sort) && ! $query->get('orderby')) {
+            if (!empty($this->default_sort) && !$query->get('orderby')) {
                 foreach ($this->default_sort as $key => $val) {
                     $query->set($key, $val);
                 }
@@ -67,7 +71,8 @@ class PostTypeSort {
         }
     }
 
-    protected function sortColumnsByMeta(\WP_Query $query) {
+    protected function sortColumnsByMeta(\WP_Query $query)
+    {
         $orderby = $query->get('orderby');
         if (
             // Don't sort by taxonomy
@@ -96,7 +101,7 @@ class PostTypeSort {
         }
         $column = $this->columns[$orderby];
         $query_params = is_array($column['sortable']) ? $column['sortable'] : [
-            'orderby'  => 'meta_value',
+            'orderby' => 'meta_value',
             'meta_key' => $orderby
         ];
         $query_params = apply_filters('devanime/admin_sort/' . $orderby, $query_params, $this->slug);
@@ -105,7 +110,8 @@ class PostTypeSort {
         }
     }
 
-    public function addToCmspo($post_types) {
+    public function addToCmspo($post_types)
+    {
         if ($this->isMenuOrder()) {
             $post_types[] = $this->slug;
         }
@@ -113,15 +119,18 @@ class PostTypeSort {
         return $post_types;
     }
 
-    public function cmspoLabel($label) {
+    public function cmspoLabel($label)
+    {
         $this->cmspo_label = $label;
     }
 
-    public function setCmspoLabel($label, $post_type) {
+    public function setCmspoLabel($label, $post_type)
+    {
         return $this->slug == $post_type ? $this->cmspo_label : $label;
     }
 
-    public function cmspoMaxLevels($levels) {
+    public function cmspoMaxLevels($levels)
+    {
         $screen = get_current_screen();
         if (!empty($screen->post_type) && $screen->post_type == $this->slug) {
             if (empty($this->register->args['hierarchical'])) {
@@ -132,7 +141,8 @@ class PostTypeSort {
         return $levels;
     }
 
-    private function isMenuOrder() {
+    private function isMenuOrder()
+    {
         return (
             (!empty($this->default_sort['orderby']) && $this->default_sort['orderby'] == 'menu_order') ||
             (!empty($this->admin_sort['orderby']) && $this->admin_sort['orderby'] == 'menu_order')
@@ -147,7 +157,8 @@ class PostTypeSort {
      * @param $post_id
      * @param $post_obj
      */
-    public function savePost($post_id, $post_obj) {
+    public function savePost($post_id, $post_obj)
+    {
         if (!apply_filters('devanime/save_post/increment_menu_order', true, $post_obj)) {
             return;
         }
@@ -161,7 +172,8 @@ class PostTypeSort {
         add_action('save_post', [$this, 'savePost'], 13, 2);
     }
 
-    public function setPostMenuOrder($post_id, $post_obj) {
+    public function setPostMenuOrder($post_id, $post_obj)
+    {
         if (
             (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) ||
             (defined('DOING_AJAX') && DOING_AJAX) ||

@@ -1,8 +1,12 @@
 <?php
 
-namespace DevAnime\Util;
+namespace DevAnime\Controller;
 
-class AfterSavePostHandler
+/**
+ * class PostController
+ * @package DevAnime\Controller
+ */
+class PostController
 {
     public function __construct()
     {

@@ -1,14 +1,14 @@
 <?php
+
+namespace DevAnime\Register;
+
+use DevAnime\Register\Taxonomy\TaxonomyArguments;
+
 /**
- * Class Taxonomy_Handler
- * @package DevAnime\Taxonomies
- * @author  DevAnime <devanimecards@gmail.com>
- * @version 1.0
+ * class RegisterTaxonomy
+ * @package DevAnime\Register
  */
-
-namespace DevAnime\Taxonomies;
-
-class TaxonomyHandler {
+class RegisterTaxonomy {
     protected $taxonomies;
 
     public function __construct($slug, $data) {
@@ -17,7 +17,7 @@ class TaxonomyHandler {
         if (is_string($this->post_types)) {
             $this->post_types = [$this->post_types];
         }
-        $this->register = new TaxonomyArgs($data['labels'], $data['args']);
+        $this->register = new TaxonomyArguments($data['labels'], $data['args']);
         add_action('init', [$this, 'registerTaxonomy'], 8);
     }
 

@@ -1,10 +1,13 @@
 <?php
 
 
-namespace DevAnime\Util;
+namespace DevAnime\Controller;
 
-
-class UploadSVG
+/**
+ * class SvgController
+ * @package DevAnime\Controller
+ */
+class SvgController
 {
     public function __construct()
     {

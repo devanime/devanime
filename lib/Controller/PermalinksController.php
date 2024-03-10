@@ -1,14 +1,12 @@
 <?php
+
+namespace DevAnime\Controller;
+
 /**
- * Class Permalinks_Manager
- * @package DevAnime\Util
- * @author  DevAnime <devanimecards@gmail.com>
- * @version 1.0
+ * Class PermalinksController
+ * @package DevAnime\Controller
  */
-
-namespace DevAnime\Util;
-
-class PermalinksManager {
+class PermalinksController {
     private static $rewritable = [];
     private static $version;
     private static $option_name = 'devanime_version';

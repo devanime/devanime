@@ -5,6 +5,10 @@ namespace DevAnime\Controller;
 use DevAnime\Util;
 use WP_REST_Server, WP_REST_Request, WP_Error;
 
+/**
+ * class RestController
+ * @package DevAnime\Controller
+ */
 abstract class RestController
 {
     protected $namespace;

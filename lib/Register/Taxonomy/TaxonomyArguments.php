@@ -1,16 +1,14 @@
 <?php
-/**
- * Class Tax_Args
- * @package DevAnime\Taxonomies
- * @author  DevAnime <devanimecards@gmail.com>
- * @version 1.0
- */
 
-namespace DevAnime\Taxonomies;
+namespace DevAnime\Register\Taxonomy;
 
 use DevAnime\Util;
 
-class TaxonomyArgs {
+/**
+ * class TaxonomyArguments
+ * @package DevAnime\Register\Taxonomy
+ */
+class TaxonomyArguments {
 
     public $labels;
     public $args;
@@ -46,7 +44,6 @@ class TaxonomyArgs {
             'separate_items_with_commas' => sprintf('Separate %s with commas', $plural_lcase),
             'add_or_remove_items'        => sprintf('Add or remove %s', $plural_lcase),
             'choose_from_most_used'      => sprintf('Choose from most used remove %s', $plural_lcase),
-
-       ];
+        ];
     }
 }

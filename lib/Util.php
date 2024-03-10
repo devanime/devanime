@@ -8,7 +8,7 @@
 
 namespace DevAnime;
 
-use DevAnime\Cache\CacheController;
+use DevAnime\Controller\CacheController;
 use DevAnime\Support\DateTime;
 use DevAnime\Util\JsonManifest;
 

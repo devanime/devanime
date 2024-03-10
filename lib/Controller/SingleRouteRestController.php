@@ -4,6 +4,10 @@ namespace DevAnime\Controller;
 
 use WP_REST_Server, WP_REST_Request;
 
+/**
+ * class SingleRouteRestController
+ * @package DevAnime\Controller
+ */
 abstract class SingleRouteRestController extends RestController
 {
     protected $route_path = '/';

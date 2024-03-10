@@ -1,22 +1,20 @@
 <?php
+
+namespace DevAnime\Register\PostType;
+
 /**
- * Class Admin_Filters
- * @package DevAnime\Custom_Post_Types
- * @author  DevAnime <devanimecards@gmail.com>
- * @version 1.0
+ * class PostTypeAdminFilters
+ * @package DevAnime\Register\PostType
  */
-
-namespace DevAnime\PostTypes;
-
-class AdminFilters {
+class PostTypeAdminFilters {
 
     protected $slug, $columns = [];
     /**
-     * @var PostTypeArgs
+     * @var PostTypeArguments
      */
     protected $register;
 
-    public function __construct($slug, $columns, PostTypeArgs $register) {
+    public function __construct($slug, $columns, PostTypeArguments $register) {
         $this->slug = $slug;
         $this->columns = $columns;
         $this->register = $register;

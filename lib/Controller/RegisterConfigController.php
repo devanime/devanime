@@ -1,14 +1,12 @@
 <?php
+
+namespace DevAnime\Controller;
+
 /**
- * Class Config_Loader
- * @package DevAnime
- * @author  DevAnime <devanimecards@gmail.com>
- * @version 1.0
+ * Class RegisterConfigController
+ * @package Devanime\Register
  */
-
-namespace DevAnime;
-
-class ConfigLoader {
+class RegisterConfigController {
     protected $config_files = [];
     protected $data;
 

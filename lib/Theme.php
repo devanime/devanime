@@ -4,7 +4,7 @@ namespace DevAnime;
 
 use DevAnime\Html\LoadStack;
 use DevAnime\Util\TemplateWrapper;
-use DevAnime\Util\UploadSVG;
+use DevAnime\Util\SvgController;
 
 /**
  * Class Theme
@@ -62,7 +62,7 @@ class Theme
     public function __construct($theme_dir = '')
     {
         new LoadStack();
-        new UploadSVG();
+        new SvgController();
         TemplateWrapper::init();
         add_action('after_setup_theme', [$this, 'setup']);
         add_action('after_setup_theme', [$this, 'config'], 100);
