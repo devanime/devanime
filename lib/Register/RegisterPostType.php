@@ -8,7 +8,7 @@ use DevAnime\Register\PostType;
 
 /**
  * class RegisterPostType
- * @package ChildTheme\Register
+ * @package DevAnime\Register
  */
 class RegisterPostType
 {

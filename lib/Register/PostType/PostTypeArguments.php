@@ -6,7 +6,7 @@ use DevAnime\Util;
 
 /**
  * class PostTypeArguments
- * @package ChildTheme\Register\PostType
+ * @package DevAnime\Register\PostType
  */
 class PostTypeArguments
 {
